@@ -5,7 +5,8 @@ from credentials import username, password
 
 L = instaloader.Instaloader()
 
-L.login(username, password)
+senha = input('Digite a senha: ')
+L.login(username, senha)
 
 profile = Profile.from_username(L.context, username)
 

@@ -1,3 +1,3 @@
 
 username = "yagopassoss"
-password = "Mewster32"
+password = ""
