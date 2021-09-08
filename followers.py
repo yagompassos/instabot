@@ -9,5 +9,24 @@ L.login(username, password)
 
 profile = Profile.from_username(L.context, username)
 
-for followers in profile.get_followers():
-    print(followers.username)
+
+file = open("seguidores.txt","a+")
+
+for follower in profile.get_followers():
+    file.write(follower.username+"\n")
+    print(follower.username)
+    
+#file.write(count)
+#print(count)
+file.close()
+
+
+file = open("seguindo.txt","a+")
+
+for followee in profile.get_followees():
+    file.write(followee.username+"\n")
+    print(followee.username)
+    
+#file.write(count)
+#print(count)
+file.close()
