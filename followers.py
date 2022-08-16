@@ -14,11 +14,9 @@ profile = Profile.from_username(L.context, username)
 file = open("seguidores.txt","a+")
 
 for follower in profile.get_followers():
-    file.write(follower.username+"\n")
-    print(follower.username)
-    
-#file.write(count)
-#print(count)
+   file.write(follower.username+"\n")
+    #seguidoresList.append(follower)
+    #countW += 1
 file.close()
 
 
@@ -26,8 +24,6 @@ file = open("seguindo.txt","a+")
 
 for followee in profile.get_followees():
     file.write(followee.username+"\n")
-    print(followee.username)
-    
-#file.write(count)
-#print(count)
+    #seguindoList.append(followee)
+    #countE += 1
 file.close()
